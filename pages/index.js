@@ -20,7 +20,6 @@ function Title(props) {
 }
 
 export default function PaginaInicial() {
-  // const username = "peas";
   const [username, setUsername] = React.useState("");
   const roteamento = useRouter();
 
@@ -62,7 +61,7 @@ export default function PaginaInicial() {
             as="form"
             onSubmit={(e) => {
               e.preventDefault();
-              roteamento.push("/chat");
+              roteamento.push(`/chat?username=${username}`);
             }}
             styleSheet={{
               display: "flex",
